@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #1a1a1a;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  padding: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #2c2c2c;
+  border-bottom: 1px solid #444;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Chat window */
+.chat-window {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Messages */
+.message {
+  max-width: 60%;
+  padding: 10px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.message.bot {
+  align-self: flex-start;
+  background: #333;
+  color: #eee;
+  border-bottom-left-radius: 0;
 }
 
-.card {
-  padding: 2em;
+.message.user {
+  align-self: flex-end;
+  background: #007bff;
+  color: #fff;
+  border-bottom-right-radius: 0;
 }
 
-.read-the-docs {
-  color: #888;
+/* Input box */
+.input-box {
+  display: flex;
+  padding: 12px;
+  background: #2c2c2c;
+  border-top: 1px solid #444;
+  gap: 8px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.input-box button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.input-box button:hover {
+  background: #0056b3;
+}
+
+.input-box button:active {
+  transform: scale(0.95);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
