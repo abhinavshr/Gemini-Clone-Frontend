@@ -1,0 +1,129 @@
+.chat-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.chat-card {
+    width: 90%;
+    height: 90vh;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    padding: 18px 25px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logout-btn {
+    padding: 8px 14px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.logout-btn:hover {
+    background: #e63b3b;
+}
+
+.chat-history {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+.msg-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msg {
+    max-width: 65%;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.user-msg {
+    background: #d1e9ff;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-msg {
+    background: #ececec;
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.input-area {
+    padding: 20px;
+    border-top: 1px solid #eaeaea;
+    background: white;
+    display: flex;
+    gap: 12px;
+}
+
+.input-area textarea {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    resize: none;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.input-area textarea:focus {
+    border-color: #0084ff;
+}
+
+.send-btn {
+    padding: 12px 22px;
+    background: #0084ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+    white-space: nowrap;
+}
+
+.send-btn:hover {
+    background: #006fe0;
+}
+
+.send-btn:disabled {
+    background: #a3c7ff;
+    cursor: not-allowed;
+}
